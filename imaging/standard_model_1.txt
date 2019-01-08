@@ -1,0 +1,30 @@
+`timescale 1ns / 1ps
+
+module layer_1(in, out);
+
+  input [149:0] in;
+  output reg [0:0] out;
+  reg [7:0] t0;
+  reg [149:0] w0 = 150'b101110001101011100111110110001000000010001101001110000101011000001000101010001111010000000001111011110011110110011110101111000100101001100010101110011;
+  reg [7:0] th0 = 8'd79;
+  reg [149:0] weighted0;
+
+
+  integer idx;
+
+  always @* begin
+    for( idx = 0; idx<150; idx = idx + 1) begin
+      weighted0[idx] = ((w0[idx])~^(in[idx]));
+    end
+  end
+
+
+  always @* begin
+    t0 = weighted0[0] + weighted0[1] + weighted0[2] + weighted0[3] + weighted0[4] + weighted0[5] + weighted0[6] + weighted0[7] + weighted0[8] + weighted0[9] + weighted0[10] + weighted0[11] + weighted0[12] + weighted0[13] + weighted0[14] + weighted0[15] + weighted0[16] + weighted0[17] + weighted0[18] + weighted0[19] + weighted0[20] + weighted0[21] + weighted0[22] + weighted0[23] + weighted0[24] + weighted0[25] + weighted0[26] + weighted0[27] + weighted0[28] + weighted0[29] + weighted0[30] + weighted0[31] + weighted0[32] + weighted0[33] + weighted0[34] + weighted0[35] + weighted0[36] + weighted0[37] + weighted0[38] + weighted0[39] + weighted0[40] + weighted0[41] + weighted0[42] + weighted0[43] + weighted0[44] + weighted0[45] + weighted0[46] + weighted0[47] + weighted0[48] + weighted0[49] + weighted0[50] + weighted0[51] + weighted0[52] + weighted0[53] + weighted0[54] + weighted0[55] + weighted0[56] + weighted0[57] + weighted0[58] + weighted0[59] + weighted0[60] + weighted0[61] + weighted0[62] + weighted0[63] + weighted0[64] + weighted0[65] + weighted0[66] + weighted0[67] + weighted0[68] + weighted0[69] + weighted0[70] + weighted0[71] + weighted0[72] + weighted0[73] + weighted0[74] + weighted0[75] + weighted0[76] + weighted0[77] + weighted0[78] + weighted0[79] + weighted0[80] + weighted0[81] + weighted0[82] + weighted0[83] + weighted0[84] + weighted0[85] + weighted0[86] + weighted0[87] + weighted0[88] + weighted0[89] + weighted0[90] + weighted0[91] + weighted0[92] + weighted0[93] + weighted0[94] + weighted0[95] + weighted0[96] + weighted0[97] + weighted0[98] + weighted0[99] + weighted0[100] + weighted0[101] + weighted0[102] + weighted0[103] + weighted0[104] + weighted0[105] + weighted0[106] + weighted0[107] + weighted0[108] + weighted0[109] + weighted0[110] + weighted0[111] + weighted0[112] + weighted0[113] + weighted0[114] + weighted0[115] + weighted0[116] + weighted0[117] + weighted0[118] + weighted0[119] + weighted0[120] + weighted0[121] + weighted0[122] + weighted0[123] + weighted0[124] + weighted0[125] + weighted0[126] + weighted0[127] + weighted0[128] + weighted0[129] + weighted0[130] + weighted0[131] + weighted0[132] + weighted0[133] + weighted0[134] + weighted0[135] + weighted0[136] + weighted0[137] + weighted0[138] + weighted0[139] + weighted0[140] + weighted0[141] + weighted0[142] + weighted0[143] + weighted0[144] + weighted0[145] + weighted0[146] + weighted0[147] + weighted0[148] + weighted0[149];
+  end 
+
+
+  always @* begin
+    out[0] = t0 > th0;
+  end 
+endmodule

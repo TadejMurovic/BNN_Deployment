@@ -1,0 +1,30 @@
+`timescale 1ns / 1ps
+
+module layer_2(in, out);
+
+  input [74:0] in;
+  output reg [0:0] out;
+  reg [6:0] t0;
+  reg [74:0] w0 = 75'b111011100010001011010111001001001110000110100011111001111000111111111101011;
+  reg [6:0] th0 = 7'd37;
+  reg [74:0] weighted0;
+
+
+  integer idx;
+
+  always @* begin
+    for( idx = 0; idx<75; idx = idx + 1) begin
+      weighted0[idx] = ((w0[idx])~^(in[idx]));
+    end
+  end
+
+
+  always @* begin
+    t0 = weighted0[0] + weighted0[1] + weighted0[2] + weighted0[3] + weighted0[4] + weighted0[5] + weighted0[6] + weighted0[7] + weighted0[8] + weighted0[9] + weighted0[10] + weighted0[11] + weighted0[12] + weighted0[13] + weighted0[14] + weighted0[15] + weighted0[16] + weighted0[17] + weighted0[18] + weighted0[19] + weighted0[20] + weighted0[21] + weighted0[22] + weighted0[23] + weighted0[24] + weighted0[25] + weighted0[26] + weighted0[27] + weighted0[28] + weighted0[29] + weighted0[30] + weighted0[31] + weighted0[32] + weighted0[33] + weighted0[34] + weighted0[35] + weighted0[36] + weighted0[37] + weighted0[38] + weighted0[39] + weighted0[40] + weighted0[41] + weighted0[42] + weighted0[43] + weighted0[44] + weighted0[45] + weighted0[46] + weighted0[47] + weighted0[48] + weighted0[49] + weighted0[50] + weighted0[51] + weighted0[52] + weighted0[53] + weighted0[54] + weighted0[55] + weighted0[56] + weighted0[57] + weighted0[58] + weighted0[59] + weighted0[60] + weighted0[61] + weighted0[62] + weighted0[63] + weighted0[64] + weighted0[65] + weighted0[66] + weighted0[67] + weighted0[68] + weighted0[69] + weighted0[70] + weighted0[71] + weighted0[72] + weighted0[73] + weighted0[74];
+  end 
+
+
+  always @* begin
+    out[0] = t0 > th0;
+  end 
+endmodule

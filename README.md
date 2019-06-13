@@ -1,6 +1,8 @@
 # BNN_Deployment
 
-If using these files and algorithms please reference "T. Murovič, A. Trost, Massively Parallel Combinational Binary Neural Networks for Edge Processing, Elektrotehniški vestnik, vol. 86, no. 1-2, pp. 47-53, 2019".
+If using these files and algorithms please reference "T. Murovič, A. Trost, Massively Parallel Combinational Binary Neural Networks for Edge Processing, Elektrotehniški vestnik, vol. 86, no. 1-2, pp. 47-53, 2019". 
+[ https://www.researchgate.net/publication/333563328_Massively_parallel_combinational_binary_neural_networks_for_edge_processing ]
+[ https://ev.fe.uni-lj.si/1-2-2019/Murovic.pdf ]
 
 cybersecurity_dataset.unswb15.m, hep_dataset_susy.m, imaging_dataset_mnist.m and iot_dataset_uji.m are binarization scripts for datasets referenced in the mentioned paper. The algorithms transform multi-modal notation of datasets to purely binary features and labels. 
 

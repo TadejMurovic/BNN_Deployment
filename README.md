@@ -10,6 +10,8 @@ Paper link: https://ev.fe.uni-lj.si/1-2-2019/Murovic.pdf
 # Datasets
 cybersecurity_dataset.unswb15.m, hep_dataset_susy.m, imaging_dataset_mnist.m and iot_dataset_uji.m are binarization scripts for datasets referenced in the mentioned paper. The algorithms transform multi-modal notation of datasets to purely binary features and labels. 
 
+Datasets are also available in this repository --> "dataset.zip".
+
 Transformed datasets serve as inputs to binary neural networks training software by "M. Courbariaux, “Binary net.”
 https://github.com/MatthieuCourbariaux/BinaryNet, 2016". This software trains and produces network parameters for the desired dataset. As this parameters are still in the form of [-1 / 1] for weights or signed integer for biases the procedure from "Y. Umuroglu, N. J. Fraser, G. Gambardella, M. Blott, P. H. W.
 Leong, M. Jahre, and K. A. Vissers, “Finn: A framework for fast,
